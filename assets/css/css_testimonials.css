@@ -83,13 +83,13 @@ input, select, textarea {
 		-ms-overflow-style: scrollbar;
 	}
 
-	@media screen and (max-width: 480px) {
+	/* @media screen and (max-width: 480px) {
 
 		html, body {
 			min-width: 320px;
 		}
 
-	}
+	} */
 
 	html {
 		box-sizing: border-box;
@@ -3235,7 +3235,7 @@ input, select, textarea {
 			width: 100%;
 			height: 100%;
 			background-color: #212931;
-			background-image: url("../../images/overlay.png"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../images/woman-walking.jpg");
+			background-image: url("../../images/overlay.png"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../images/macbook.jpg");
 			background-size: auto,								auto,														100% auto;
 			background-position: center,								center,														top center;
 			background-repeat: repeat,								no-repeat,													no-repeat;
@@ -3755,6 +3755,32 @@ input, select, textarea {
 			}
 
 		}
+					/**************** gallery.html ***************/
+
+/* section three */
+.section-three{
+    margin: 40px 0;
+}
+.single-img{
+    position: relative;
+    margin: 10px;
+}
+.single-img-content{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #fff;
+    padding: 5px 30px;
+    background: rgba(0, 0, 0, 0.7);
+}
+.single-img-content h3{
+    font-size: 18px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+/************** end of gallery.html ***********/
 
 /* Main */
 
@@ -3825,6 +3851,38 @@ input, select, textarea {
 					}
 
 			}
+			@media screen and (min-width: 800px){
+				/* section two */
+				.insta-imgs{
+					grid-template-columns: repeat(4, 1fr);
+				}
+			
+				/* section three */
+				.gallery{
+					display: grid;
+					grid-template-columns: repeat(2, 1fr);
+				}
+			
+				/* section four */
+				.blog-wrapper-sm{
+					display: grid;
+					grid-template-columns: repeat(2, 1fr);
+					grid-gap: 20px;
+				}
+			}
+			@media screen and (min-width: 1200px){
+				/* footer */
+				.footer-container > div{
+					width: 60%;
+					margin-left: auto;
+					margin-right: auto;
+				}
+			
+				/* section three */
+				.gallery{
+					grid-template-columns: repeat(3, 1fr);
+				}
+			}
 
 		#main > .posts {
 			display: -moz-flex;
@@ -3860,14 +3918,14 @@ input, select, textarea {
 			}
 																															/* INDIVIDUAL POST PADDING */
 			#main > .posts > * {
-				padding: 3rem;
-				width: 50%;
+				padding: 1.5rem;
+				width: 33%;
 			}
 
 			#main > .posts > article {
 				border-color: #eeeeee;
 				border-left-width: 2px;
-				border-style: solid;
+				border-style:none;
 				border-top-width: 2px;
 				text-align: center;
 			}
